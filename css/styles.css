@@ -287,6 +287,7 @@ pointer-events: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 10px;
+    padding-left: 42px;
 }
 
 .modal-input:hover {
@@ -317,8 +318,13 @@ pointer-events: none;
     left: 9px;
     display: inline-block;
     transform: translateY(-50%);
-
+color: #212121;
 } 
+
+.label-icon:hover,
+.label-icon:focus {
+color: var(--accent-color);
+}
 
 .socs-icon {
     width: 30px;
@@ -326,7 +332,6 @@ pointer-events: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #FFFFFF;
-    color: #212121;
     position: absolute;
     top: 8px;
     right: 8px;
