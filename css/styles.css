@@ -249,11 +249,16 @@ margin-right: 10px;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop .is-hidden {
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
 }
+.is-hidden{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.1);
@@ -270,7 +275,7 @@ pointer-events: none;
     text-align: left;
     background-color: #FFFFFF;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
-
+border-radius: 4px;
 }
 
 .modal-title {
@@ -279,6 +284,9 @@ pointer-events: none;
     Line-height: 1.15;
     color: #212121;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-input {
@@ -290,8 +298,9 @@ pointer-events: none;
     padding-left: 42px;
 }
 
-.modal-input:hover {
+.modal-input:focus {
     border: 1px solid #2196F3;
+    outline: none;
 }
 
 .modal-label {
@@ -299,6 +308,44 @@ pointer-events: none;
     color: #757575;
     text-align: left;
     display: block;
+    margin-bottom: 4px;
+}
+
+.modal-text:focus {
+    border: 1px solid #2196F3;
+        outline: none;
+}
+
+.modal-input:focus + .label-icon {
+    fill: var(--accent-color);
+}
+
+.check-text {
+    display: flex;
+}
+
+.modal-check {
+    appearance: none;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+        position: absolute;
+}
+
+.check-text::before {
+    content: " ";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    margin-right: 8.38px;
+}
+
+.modal-check.modal-check:checked + .check-text::before {
+    background-color: var(--accent-color);
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
 }
 
 .modal-text {
@@ -308,8 +355,10 @@ pointer-events: none;
     border-radius: 4px;
 }
 
+
 .input-wrap {
     position: relative;
+    display: block;
 }
 
 .label-icon {
@@ -324,6 +373,12 @@ color: #212121;
 .label-icon:hover,
 .label-icon:focus {
 color: var(--accent-color);
+}
+
+.check-conditions {
+    color: var(--accent-color);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .socs-icon {
