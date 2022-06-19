@@ -100,11 +100,13 @@
             <textarea name="comment" id="comment" class="modal-text" placeholder="Введите текст"></textarea>
             </div>
 
-             <br />
+             
             <input type="checkbox" name="privacy" value="true" class="modal-check" id="privacy">
             <label for="privacy" class="check-text">Соглашаюсь с рассылкой и принимаю <span class="check-conditions"> Условия договора </span></label>
-             <br />
-            <button type="submit">Отправить</button>
+             
+            <div class="button-form">
+            <button type="submit" class="modal-button">Отправить</button>
+            </div>
         </form>
             </div>
         </div>
@@ -533,6 +535,14 @@
                         </a>
                     </li>
                 </ul>
+        </section>
+
+        <section class="content-sign">
+            <p class="sign-title">ПОДПИШИСЬ НА РАССЫЛКУ</p>
+            <div class="footer-block">
+            <input type="email" class="footer-input" name="user-email" id="user-email" placeholder="E-mail" required/>
+        <button class="footer-button"> Подписаться</button>
+        </div>
         </section>
     </div>
     </div>
